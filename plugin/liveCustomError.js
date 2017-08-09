@@ -3,6 +3,7 @@ videojs.registerPlugin('liveCustomError', function() {
     // Initialize boolean variable so overlay not shown be default
     showOverlay = false;
 
+  // ### Overlay definition ###
   // Define when the overlay should be displayed
   // and what it will display
   myPlayer.overlay({
@@ -13,6 +14,7 @@ videojs.registerPlugin('liveCustomError', function() {
     }]
   });
 
+  // ### Modify default error message ###
   // Redefine the messages displayed by the error
   // THIS ERROR WILL NOT BE DISPLAYED unless you don't implement the overlay image
   // or if the overlay fails to load the image for some reason
@@ -25,14 +27,14 @@ videojs.registerPlugin('liveCustomError', function() {
     }
   });
 
-  // Listen for an error event
+  // ### Listen for an error event ###
   myPlayer.on('error', function(err) {
     // The overlay should only be displayed if the error code is 4 or 2
-    // and the duration is NaN (not a number)
+    // AND the duration is NaN (not a number), which means no video has loaded
     // The following code gets the error code and duration
     var errNo = myPlayer.error().code;
     var duration = myPlayer.duration();
-    // Check if the error code and durations mean not video has loaded
+    // Check if the error code and duration means no video has loaded
     if (((errNo == '2') && (isNaN(duration))) || ((errNo == '4') && (isNaN(duration)))) {
       // If conditions met, set display boolean variable to true
       showOverlay = true;
@@ -48,5 +50,6 @@ videojs.registerPlugin('liveCustomError', function() {
       myPlayer.addClass("hide-overlay");
     }
   })
+
 
 });
