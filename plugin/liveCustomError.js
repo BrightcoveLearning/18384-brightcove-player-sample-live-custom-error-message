@@ -10,7 +10,7 @@ videojs.registerPlugin('liveCustomError', function() {
     overlays: [{
       "start": "loadstart",
       "end": "ended",
-      "content": "<img src='http://solutions.brightcove.com/bcls/assets/images/please-stand-by.png'>"
+      "content": "<img src='https://solutions.brightcove.com/bcls/assets/images/please-stand-by.png'>"
     }]
   });
 

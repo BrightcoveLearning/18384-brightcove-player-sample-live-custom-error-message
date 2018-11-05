@@ -32,25 +32,25 @@
     }
   </style>
   <!-- Link to the Overlay Plugin's CSS -->
-  <link href="//players.brightcove.net/videojs-overlay/1/videojs-overlay.css" rel="stylesheet">
+  <link href="https://players.brightcove.net/videojs-overlay/1/videojs-overlay.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <video id="myPlayerID"
+  <video-js id="myPlayerID"
     data-video-id="5185914204001"
     data-account="1752604059001"
     data-player="Hyv669PDZ"
     data-embed="default"
     data-application-id
     class="video-js"
-    controls></video>
-  <script src="//players.brightcove.net/1752604059001/Hyv669PDZ_default/index.min.js"></script>
+    controls></video-js>
+  <script src="https://players.brightcove.net/1752604059001/Hyv669PDZ_default/index.min.js"></script>
 
   <!-- Include the Overlay Plugin's JavaScript -->
-  <script src="//players.brightcove.net/videojs-overlay/1/videojs-overlay.min.js"></script>
+  <script src="https://players.brightcove.net/videojs-overlay/1/videojs-overlay.min.js"></script>
   <script type="text/javascript">
-    videojs('myPlayerID').ready(function() {
+    videojs.getPlayer('myPlayerID').ready(function() {
       var myPlayer = this,
         // Initialize boolean variable so overlay not shown be default
         showOverlay = false;
@@ -62,7 +62,7 @@
         overlays: [{
           "start": "loadstart",
           "end": "ended",
-          "content": "<img src='http://solutions.brightcove.com/bcls/assets/images/please-stand-by.png'>"
+          "content": "<img src='https://solutions.brightcove.com/bcls/assets/images/please-stand-by.png'>"
         }]
       });
 
