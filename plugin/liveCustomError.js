@@ -35,7 +35,7 @@ videojs.registerPlugin('liveCustomError', function() {
     var errNo = myPlayer.error().code;
     var duration = myPlayer.duration();
     // Check if the error code and duration means no video has loaded
-    if (((errNo == '2') && (isNaN(duration))) || ((errNo == '4') && (isNaN(duration)))) {
+    if (errNo == "4" && duration == 0)) {
       // If conditions met, set display boolean variable to true
       showOverlay = true;
     }
