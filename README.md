@@ -1,4 +1,5 @@
 # 18384-brightcove-player-sample-live-custom-error-message
+
 For more information about this sample see: https://support.brightcove.com/brightcove-player-sample-live-custom-error-message-revision
 
 <p>The purpose and structure of files in this repo are:</p>
@@ -25,7 +26,7 @@ For more information about this sample see: https://support.brightcove.com/brigh
     </tr>
     <tr>
       <td>plugin/pluginName.css</td>
-      <td>The CSS for the plugin. An example, actual filename could be <strong>liveCustomError.css</strong>.</td>
+      <td>No CSS needed for this example.</strong>.</td>
     </tr>
   </tbody>
 </table>
